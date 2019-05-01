@@ -1,0 +1,9 @@
+select -r Root_M;
+parent -w;
+select -cl;
+float $posMain[]=`xform -q -ws -piv Main`;
+joint -p $posMain[0] $posMain[1] $posMain[2] -n "root";
+parent Root_M root;
+
+select -r Group;
+delete;
